@@ -2,32 +2,27 @@
 
 using namespace std;
 
-void time(int seconds, int hrs, int min, int sec);
 
-int main() {
+void time(int seconds);
 
-  int seconds;
-  
-cout << "Enter time in seconds:";
-cin >> seconds;
+    int main() {
+    int sec, mins, hrs, seconds;
 
-  int sec, min, hrs;
+    cout << "Enter time in seconds:";
+    cin >> seconds;
 
-  time(int (seconds), int (hrs), int (min), int (sec));
-
-    cout << " The timne"
-  
-  
+    time(seconds);
 
 }
 
-void time(int seconds, int hrs, int min, int sec){
 
-  int rem1;
-
-  hrs = seconds/3600;
-  rem1 = seconds%3600;
-  min = rem1/60;
-  sec = rem1%60;
+void time(int seconds){
+    int sec, mins, hrs;
+    int rem1;
+    hrs = seconds/3600;
+    rem1 = seconds%3600;
+    mins = rem1/60;
+    sec = rem1%60;
   
-  }
+    cout << " The time is " << hrs << " hours " << mins << " minutes and " << sec << " seconds";
+    }
